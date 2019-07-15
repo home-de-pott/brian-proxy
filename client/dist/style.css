@@ -1,0 +1,36 @@
+.hidden {
+  display: none !important;
+}
+
+body {
+  font-family: helvetica-neue-light, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+}
+
+.products {
+  width: 90%;
+  margin: auto;
+}
+#products__container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.products__product {
+  width: 20%;
+  min-width: 150px;
+  margin: 10px;
+  /* border: 1px solid lightslategrey; */
+  cursor: pointer;
+}
+
+.products__product-image img {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.products__product-name {
+  margin: 10px 5px;
+}
