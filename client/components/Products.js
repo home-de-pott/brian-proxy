@@ -11,8 +11,12 @@ class Products extends Component {
     };
   }
   async componentDidMount() {
+    window.addEventListener('getProduct', event => {
+      console.log('Getting', event.detail.id);
+      this.props.history.push('/products/' + event.detail.id);
+    });
     const response = await axios.get(
-      'http://ec2-18-221-151-249.us-east-2.compute.amazonaws.com/product-data'
+      'http://homedepottcarousel.us-east-2.elasticbeanstalk.com/product-data'
     );
     const products = response.data;
     console.log('component did mount; got products', products);
@@ -21,7 +25,6 @@ class Products extends Component {
   render() {
     return (
       <div id="home">
-        <h1>Select a Product</h1>
         <div id="products__container">
           {this.state.products.map(product => (
             <ProductThumbnail key={product.ID} productData={product} />
