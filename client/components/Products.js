@@ -11,10 +11,6 @@ class Products extends Component {
     };
   }
   async componentDidMount() {
-    window.addEventListener('getProduct', event => {
-      console.log('Getting', event.detail.id);
-      this.props.history.push('/products/' + event.detail.id);
-    });
     const response = await axios.get(
       'http://homedepottcarousel.us-east-2.elasticbeanstalk.com/product-data'
     );

@@ -1,23 +1,22 @@
 import React, { Component } from 'react';
+import urls from '../config';
+import appendScript from '../utils/appendScript';
 
 class Product extends Component {
   componentDidMount() {
     // NB do this for all microservices
+    window.addEventListener('getProduct', event => {
+      this.props.history.push('/products/' + event.detail.id);
+    });
+    //product view
+    // appendScript(urls.productUrl + '/bundle.js');
     // carousel
-    this.appendScript(
-      'http://homedepottcarousel.us-east-2.elasticbeanstalk.com/bundle.js'
-    );
+    appendScript('http://localhost:3000/bundle.js');
+    // appendScript(urls.carouselUrl + '/bundle.js');
     // reviews
-    this.appendScript(
-      'http://ec2-18-219-134-212.us-east-2.compute.amazonaws.com/bundle.js'
-    );
+    appendScript(urls.reviewsUrl + '/bundle.js');
   }
-  appendScript(url) {
-    const script = document.createElement('script');
-    script.src = url;
-    script.async = true;
-    document.body.appendChild(script);
-  }
+
   render() {
     return (
       <div>

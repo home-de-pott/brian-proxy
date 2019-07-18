@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import Rating from 'react-rating';
 import axios from 'axios';
 
+import urls from '../config';
+
 class ProductThumbnail extends Component {
   constructor(props) {
     super(props);
@@ -24,8 +26,7 @@ class ProductThumbnail extends Component {
 
   async componentDidMount() {
     const response = await axios.get(
-      'http://ec2-18-219-134-212.us-east-2.compute.amazonaws.com/reviews/' +
-        this.state.productData.ID
+      urls.reviewsUrl + '/reviews/' + this.state.productData.ID
     );
     const reviews = response.data;
     console.log('Reviews', reviews);
