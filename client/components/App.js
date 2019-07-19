@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import Product from './Product';
+import ProductPage from './ProductPage';
 import Products from './Products';
 import Home from './Home';
 
@@ -17,7 +17,7 @@ class App extends Component {
           <Router>
             <Route path="/" exact component={Home} />
             <Route path="/products/" exact component={Products} />
-            <Route path="/products/:id" component={Product} />
+            <Route path="/products/:id" component={ProductPage} />
           </Router>
         </div>
       </>

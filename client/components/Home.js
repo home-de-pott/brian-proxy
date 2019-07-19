@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import urls from '../config';
 import appendScript from '../utils/appendScript';
+import Product from 'hd-thumbnail';
 // import ProductThumbnail from 'product-thumbnail';
 
 class Home extends Component {
@@ -9,12 +10,12 @@ class Home extends Component {
     super(props);
   }
   componentDidMount() {
-    // window.addEventListener('getProduct', event => {
-    //   console.log('Getting', event.detail.id);
-    //   window.location.history.push('/products/' + event.detail.id);
-    // });
-    appendScript(urls.carouselUrl + '/bundle.js');
-    // appendScript('http://localhost:3000/bundle.js')
+    window.addEventListener('getProduct', event => {
+      console.log('pushing history');
+      this.props.history.push('/products/' + event.detail.id);
+    });
+    // appendScript(urls.carouselUrl + '/bundle.js');
+    appendScript('http://localhost:3000/bundle.js');
   }
   render() {
     return (

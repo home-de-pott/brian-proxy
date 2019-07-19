@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
-import ProductThumbnail from './ProductThumbnail';
+import Product from 'hd-thumbnail';
 
 class Products extends Component {
   constructor(props) {
@@ -11,6 +10,10 @@ class Products extends Component {
     };
   }
   async componentDidMount() {
+    window.addEventListener('getProduct', event => {
+      console.log('pushing history');
+      this.props.history.push('/products/' + event.detail.id);
+    });
     const response = await axios.get(
       'http://homedepottcarousel.us-east-2.elasticbeanstalk.com/product-data'
     );
@@ -23,7 +26,7 @@ class Products extends Component {
       <div id="home">
         <div id="products__container">
           {this.state.products.map(product => (
-            <ProductThumbnail key={product.ID} productData={product} />
+            product ? <Product key={product.ID} product={product} /> : null
           ))}
         </div>
       </div>

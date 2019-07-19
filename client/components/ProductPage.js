@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import urls from '../config';
 import appendScript from '../utils/appendScript';
 
-class Product extends Component {
+class ProductPage extends Component {
   componentDidMount() {
-    // NB do this for all microservices
     window.addEventListener('getProduct', event => {
+      console.log('pushing history');
       this.props.history.push('/products/' + event.detail.id);
     });
+
     //product view
     // appendScript(urls.productUrl + '/bundle.js');
     // carousel
@@ -31,4 +32,4 @@ class Product extends Component {
   }
 }
 
-export default Product;
+export default ProductPage;
