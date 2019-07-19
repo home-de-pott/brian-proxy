@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import urls from '../config';
 import appendScript from '../utils/appendScript';
+import addUpdatePathListener from '../utils/addUpdatePathListener';
 
 class ProductPage extends Component {
+  constructor(props) {
+    super(props);
+  }
   componentDidMount() {
-    window.addEventListener('getProduct', event => {
-      console.log('pushing history');
-      this.props.history.push('/products/' + event.detail.id);
-    });
-
+    addUpdatePathListener(this.props.history);
     //product view
     appendScript(urls.productUrl + '/bundle.js');
     // carousel
@@ -19,9 +19,9 @@ class ProductPage extends Component {
   }
 
   render() {
+    console.log('rerendering product page');
     return (
       <div>
-        Here be the product
         <div id="product-view__container">
           <div id="product"></div>
           <div id="carousel"></div>

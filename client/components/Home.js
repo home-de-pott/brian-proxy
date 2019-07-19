@@ -2,21 +2,26 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import urls from '../config';
 import appendScript from '../utils/appendScript';
-import Product from 'hd-thumbnail';
-// import ProductThumbnail from 'product-thumbnail';
+import addUpdatePathListener from '../utils/addUpdatePathListener';
 
 class Home extends Component {
   constructor(props) {
     super(props);
+    this.state = {};
   }
+
   componentDidMount() {
-    window.addEventListener('getProduct', event => {
-      console.log('pushing history');
-      this.props.history.push('/products/' + event.detail.id);
-    });
+    addUpdatePathListener(this.props.history);
     // appendScript(urls.carouselUrl + '/bundle.js');
     appendScript('http://localhost:3000/bundle.js');
   }
+
+  componentWillUnmount() {
+    console.log('unmounting home and removing event listener');
+    const listener = this.listener;
+    window.removeEventListener('updatePath', listener);
+  }
+
   render() {
     return (
       <>
