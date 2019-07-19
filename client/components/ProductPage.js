@@ -12,8 +12,8 @@ class ProductPage extends Component {
     //product view
     appendScript(urls.productUrl + '/bundle.js');
     // carousel
-    // appendScript('http://localhost:3000/bundle.js');
-    appendScript(urls.carouselUrl + '/bundle.js');
+    appendScript('http://localhost:3000/bundle.js');
+    // appendScript(urls.carouselUrl + '/bundle.js');
     // reviews
     appendScript(urls.reviewsUrl + '/bundle.js');
   }

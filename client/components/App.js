@@ -4,6 +4,7 @@ import ProductPage from './ProductPage';
 import Products from './Products';
 import Home from './Home';
 import Via from './Via';
+import Spinner from './Spinner';
 
 class App extends Component {
   constructor(props) {

@@ -123,3 +123,28 @@ body {
   vertical-align: 20%;
   font-size: 0.8rem;
 }
+
+.spinner-container {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: RGBA(249, 99, 2);
+}
+
+.spinner {
+  position: fixed;
+  top: 40vh;
+  left: 42vw;
+  font-size: 10rem;
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
