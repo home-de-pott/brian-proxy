@@ -6,6 +6,7 @@ export default function(history) {
     return;
   } else {
     window.addEventListener('updatePath', event => {
+      console.log('pushing to history');
       history.push('/via/' + event.detail.id);
     });
     alreadyAdded = true;

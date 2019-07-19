@@ -12,14 +12,8 @@ class Home extends Component {
 
   componentDidMount() {
     addUpdatePathListener(this.props.history);
-    // appendScript(urls.carouselUrl + '/bundle.js');
-    appendScript('http://localhost:3000/bundle.js');
-  }
-
-  componentWillUnmount() {
-    console.log('unmounting home and removing event listener');
-    const listener = this.listener;
-    window.removeEventListener('updatePath', listener);
+    appendScript(urls.carouselUrl + '/bundle.js');
+    // appendScript('http://localhost:3000/bundle.js');
   }
 
   render() {
