@@ -10,7 +10,7 @@ class ProductPage extends Component {
     });
 
     //product view
-    // appendScript(urls.productUrl + '/bundle.js');
+    appendScript(urls.productUrl + '/bundle.js');
     // carousel
     appendScript('http://localhost:3000/bundle.js');
     // appendScript(urls.carouselUrl + '/bundle.js');
