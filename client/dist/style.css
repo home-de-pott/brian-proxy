@@ -148,3 +148,29 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.footer {
+  background-color: #eeeeee;
+  display: flex;
+  padding: 50px 20px;
+  margin-top: 50px;
+  justify-content: space-evenly;
+}
+
+.footer__column-title {
+  font-weight: bolder;
+  padding: 5px;
+}
+
+.footer__column-option {
+  color: #3e7697;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.not-found {
+  width: 72%;
+  margin: auto;
+  padding-top: 50px;
+  color: #f96302;
+}

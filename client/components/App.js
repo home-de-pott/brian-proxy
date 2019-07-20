@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ProductPage from './ProductPage';
 import Products from './Products';
 import Home from './Home';
 import Via from './Via';
-import Spinner from './Spinner';
+import NotFound from './NotFound';
 
 class App extends Component {
   constructor(props) {
@@ -17,10 +17,13 @@ class App extends Component {
       <>
         <div>
           <Router>
-            <Route path="/" exact component={Home} />
-            <Route path="/products/" exact component={Products} />
-            <Route path="/products/:id" component={ProductPage} />
-            <Route path="/via/:id" component={Via} />
+            <Switch>
+              <Route path="/" exact component={Home} />
+              <Route path="/products/" exact component={Products} />
+              <Route path="/products/:id" component={ProductPage} />
+              <Route path="/via/:id" component={Via} />
+              <Route component={NotFound} />
+            </Switch>
           </Router>
         </div>
       </>
