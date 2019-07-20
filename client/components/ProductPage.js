@@ -9,11 +9,11 @@ class ProductPage extends Component {
   }
   componentDidMount() {
     addUpdatePathListener(this.props.history);
+    // carousel
+    // appendScript('http://localhost:3000/bundle.js');
+    appendScript(urls.carouselUrl + '/bundle.js');
     //product view
     appendScript(urls.productUrl + '/bundle.js');
-    // carousel
-    appendScript('http://localhost:3000/bundle.js');
-    // appendScript(urls.carouselUrl + '/bundle.js');
     // reviews
     appendScript(urls.reviewsUrl + '/bundle.js');
   }
@@ -23,7 +23,9 @@ class ProductPage extends Component {
     return (
       <div>
         <div id="product-view__container">
-          <div id="product"></div>
+          <div id="product">
+            <div className="spinner">&#128296;</div>
+          </div>
           <div id="carousel"></div>
           <div id="reviews"></div>
         </div>
