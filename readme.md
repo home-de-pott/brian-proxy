@@ -23,6 +23,8 @@ Users can search for and view products, view reviews, view related products, log
 
 [Ibrahim Jabr](https://github.com/ibrahimjabr12) built the main product view.
 
+Each service has its own front end, server, and database.
+
 ## Tech Stack
 
 <img src="https://lh3.googleusercontent.com/ZIHOUCCxFaB7NirPhEX4K8cyTPIMvxvdJxpuhjb_qJ_dk-z7qEgD8riaR0ODXzXQZYn23zHpFiwGzxTDT88FTLeUMoPqlIjyLKoL1am8MH5pCoJExjL8SUC8uaeeiAjvQB0_vym6" width="100"/>
