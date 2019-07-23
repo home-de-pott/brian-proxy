@@ -136,6 +136,7 @@ body {
   top: 40vh;
   left: 42vw;
   font-size: 10rem;
+  z-index: 1000;
   animation-name: spin;
   animation-duration: 2s;
   animation-iteration-count: infinite;

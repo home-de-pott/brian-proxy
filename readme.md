@@ -3,6 +3,7 @@
 _A partial clone of the Home Depot website, built with microservice architecture_
 
 <img src="readme/assets/Screenshot 2019-07-20 10.21.55.png">
+![](readme/assets/homeDePott.mov)
 
 ## About
 

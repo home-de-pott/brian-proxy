@@ -237,7 +237,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  reviewsUrl: 'http://homedepottreviews.us-east-2.elasticbeanstalk.com',\n  productUrl: 'http://itemdes.us-east-2.elasticbeanstalk.com',\n  carouselUrl: 'http://homedepottcarousel.us-east-2.elasticbeanstalk.com'\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jbGllbnQvY29uZmlnLmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vY2xpZW50L2NvbmZpZy5qcz85MWIxIl0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBkZWZhdWx0IHtcbiAgcmV2aWV3c1VybDogJ2h0dHA6Ly9ob21lZGVwb3R0cmV2aWV3cy51cy1lYXN0LTIuZWxhc3RpY2JlYW5zdGFsay5jb20nLFxuICBwcm9kdWN0VXJsOiAnaHR0cDovL2l0ZW1kZXMudXMtZWFzdC0yLmVsYXN0aWNiZWFuc3RhbGsuY29tJyxcbiAgY2Fyb3VzZWxVcmw6ICdodHRwOi8vaG9tZWRlcG90dGNhcm91c2VsLnVzLWVhc3QtMi5lbGFzdGljYmVhbnN0YWxrLmNvbScsXG59O1xuIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBSEEiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./client/config.js\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  reviewsUrl: 'http://homedepottreviews.us-east-2.elasticbeanstalk.com',\n  productUrl: 'http://itemdesc-env.us-east-2.elasticbeanstalk.com/',\n  carouselUrl: 'http://homedepottcarousel.us-east-2.elasticbeanstalk.com'\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jbGllbnQvY29uZmlnLmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vY2xpZW50L2NvbmZpZy5qcz85MWIxIl0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBkZWZhdWx0IHtcbiAgcmV2aWV3c1VybDogJ2h0dHA6Ly9ob21lZGVwb3R0cmV2aWV3cy51cy1lYXN0LTIuZWxhc3RpY2JlYW5zdGFsay5jb20nLFxuICBwcm9kdWN0VXJsOiAnaHR0cDovL2l0ZW1kZXNjLWVudi51cy1lYXN0LTIuZWxhc3RpY2JlYW5zdGFsay5jb20vJyxcbiAgY2Fyb3VzZWxVcmw6ICdodHRwOi8vaG9tZWRlcG90dGNhcm91c2VsLnVzLWVhc3QtMi5lbGFzdGljYmVhbnN0YWxrLmNvbScsXG59O1xuIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBSEEiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./client/config.js\n");
 
 /***/ }),
 
@@ -4260,7 +4260,7 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
